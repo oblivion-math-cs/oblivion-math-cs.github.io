@@ -79,6 +79,12 @@ h1 em, h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; 
 .progress-track { height: 5px; margin-top: 17px; background: #d3deee; }
 .progress-track span { display: block; height: 100%; background: var(--blue); }
 .book-progress p { margin-top: 10px; color: var(--muted); font-family: var(--mono); font-size: .63rem; text-transform: uppercase; }
+.books-read { margin-top: 92px; }
+.books-read .section-kicker span { color: var(--ink); }
+.read-list { margin-top: 28px; border-top: 1px solid var(--line); }
+.read-item { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding: 17px 0; border-bottom: 1px solid var(--line); }
+.read-item strong { font-size: .88rem; }
+.read-item span { color: var(--muted); font-family: var(--mono); font-size: .62rem; text-transform: uppercase; }
 .essay-list { margin-top: 64px; border-top: 1px solid var(--line); }
 .essay-item { display: grid; grid-template-columns: 120px 1fr 25px; gap: 25px; align-items: center; padding: 25px 0; border-bottom: 1px solid var(--line); transition: padding 180ms ease; }
 .essay-item:hover { padding-left: 10px; }
