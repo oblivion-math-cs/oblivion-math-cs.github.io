@@ -1,0 +1,94 @@
+:root {
+  --ink: #07121f;
+  --blue: #0f5bd3;
+  --pale-blue: #e8f0fc;
+  --white: #f8fafc;
+  --muted: #6c7888;
+  --line: #cbd5e1;
+}
+
+* { box-sizing: border-box; }
+
+html { min-height: 100%; background: var(--white); }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+  background: var(--white);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--blue); }
+
+.site-header, .site-footer {
+  width: min(100% - 48px, 1120px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.site-mark { font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+.site-mark span { color: var(--blue); margin-left: 5px; }
+nav { display: flex; gap: 25px; font-size: 11px; }
+nav a { color: var(--muted); }
+nav a.active, nav a:hover { color: var(--ink); }
+nav a.active { border-bottom: 2px solid var(--blue); padding-bottom: 5px; }
+
+.page { width: min(100% - 48px, 800px); margin: 0 auto; flex: 1; }
+.intro-page { padding: 105px 0 80px; }
+.reading-page, .skills-page { padding: 76px 0 90px; }
+
+.eyebrow, .label { margin: 0 0 17px; color: var(--blue); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+h1 { margin: 0; color: var(--ink); font-family: Georgia, serif; font-size: clamp(42px, 7vw, 72px); font-weight: 400; letter-spacing: -.045em; line-height: .98; }
+h1 em { color: var(--blue); font-style: normal; }
+.lede { max-width: 390px; margin: 30px 0 82px; color: var(--muted); font-size: 15px; line-height: 1.7; }
+.intro-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 80px; padding-top: 22px; border-top: 1px solid var(--line); }
+.feature-link { display: block; color: var(--blue); font-family: Georgia, serif; font-size: 24px; }
+.feature-link span { font-family: sans-serif; font-size: 16px; }
+.muted { max-width: 270px; margin-top: 11px; color: var(--muted); font-size: 12px; }
+.index-list { display: flex; flex-direction: column; gap: 9px; }
+.index-list a { display: flex; gap: 18px; border-bottom: 1px solid var(--line); padding: 7px 0; font-size: 13px; }
+.index-list a span { color: var(--blue); font-size: 10px; }
+
+.meta { margin: 21px 0 42px; color: var(--muted); font-size: 12px; }
+.rule { height: 1px; background: var(--line); margin-bottom: 38px; }
+.essay { max-width: 570px; font-family: Georgia, serif; font-size: 16px; line-height: 1.85; }
+.essay p { margin: 0 0 24px; }
+.dropcap:first-letter { float: left; margin: 8px 8px 0 0; color: var(--blue); font-family: Georgia, serif; font-size: 57px; line-height: .7; }
+blockquote { margin: 35px 0; padding: 15px 0 15px 22px; border-left: 2px solid var(--blue); color: var(--blue); font-size: 20px; line-height: 1.35; }
+
+.reading-list { max-width: 620px; }
+.book-entry { padding: 21px 0 25px; border-bottom: 1px solid var(--line); }
+.book-line { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.book-line span { color: var(--blue); font-size: 11px; white-space: nowrap; }
+.book-entry p { margin: 0 0 12px; color: var(--muted); font-size: 12px; }
+progress { width: 100%; height: 5px; border: 0; appearance: none; }
+progress::-webkit-progress-bar { background: var(--pale-blue); }
+progress::-webkit-progress-value { background: var(--blue); }
+progress::-moz-progress-bar { background: var(--blue); }
+h2 { margin: 0 0 5px; font-family: Georgia, serif; font-size: 22px; font-weight: 400; }
+.skills-page h1 { margin-bottom: 42px; }
+.skill-list { max-width: 520px; margin: 0; padding: 22px 0 22px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: var(--blue); }
+.skill-list li { padding: 9px 0; color: var(--ink); font-family: Georgia, serif; font-size: 19px; }
+.skill-list li::marker { color: var(--blue); }
+.site-footer { padding: 20px 0; color: var(--muted); font-size: 10px; }
+.site-footer a { color: var(--blue); }
+
+@media (max-width: 620px) {
+  .site-header, .site-footer, .page { width: min(100% - 32px, 800px); }
+  .site-header { align-items: flex-start; gap: 20px; }
+  nav { gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
+  .intro-page { padding-top: 72px; }
+  .reading-page, .skills-page { padding-top: 54px; }
+  .lede { margin-bottom: 58px; }
+  .intro-grid { grid-template-columns: 1fr; gap: 38px; }
+  .skills-page h1 { margin-bottom: 48px; }
+}
