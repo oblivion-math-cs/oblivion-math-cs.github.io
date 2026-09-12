@@ -1,4 +1,4 @@
-const revealItems = document.querySelectorAll('.now-item');
+const revealItems = document.querySelectorAll('.directory-card, .reading-item, .book-card');
 
 const revealOnScroll = () => {
   revealItems.forEach((item, index) => {
