@@ -1,4 +1,4 @@
-const revealItems = document.querySelectorAll('.directory-card, .reading-item, .book-card');
+const revealItems = document.querySelectorAll('.directory-card, .reading-item, .book-card, .essay-item, .vce-card');
 const navLinks = document.querySelectorAll('.site-nav a');
 
 const revealOnScroll = () => {
