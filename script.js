@@ -1,25 +1,19 @@
-const revealItems = document.querySelectorAll('.directory-card, .reading-item, .book-card, .essay-item, .vce-card');
-const navLinks = document.querySelectorAll('.site-nav a');
+const revealItems = document.querySelectorAll('.intro-item, .book-row, .read-list div, .essay-row, .subject-grid article');
 
-const revealOnScroll = () => {
-  revealItems.forEach((item, index) => {
-    const itemTop = item.getBoundingClientRect().top;
-    if (itemTop < window.innerHeight * 0.88) {
+revealItems.forEach((item, index) => {
+  item.style.opacity = '0';
+  item.style.transform = 'translateY(10px)';
+  item.style.transition = `opacity 450ms ease ${index * 45}ms, transform 450ms ease ${index * 45}ms`;
+});
+
+const revealVisibleItems = () => {
+  revealItems.forEach((item) => {
+    if (item.getBoundingClientRect().top < window.innerHeight * .92) {
       item.style.opacity = '1';
       item.style.transform = 'translateY(0)';
-      item.style.transitionDelay = `${index * 70}ms`;
     }
   });
 };
 
-revealItems.forEach((item) => {
-  item.style.opacity = '0';
-  item.style.transform = 'translateY(12px)';
-  item.style.transition = 'opacity 500ms ease, transform 500ms ease';
-});
-
-window.addEventListener('scroll', revealOnScroll, { passive: true });
-revealOnScroll();
-
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === currentPage));
+window.addEventListener('scroll', revealVisibleItems, { passive: true });
+revealVisibleItems();

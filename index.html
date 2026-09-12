@@ -11,40 +11,28 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="site-frame">
+<body id="top">
+  <div class="site-shell">
     <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Home">AM<span>/</span></a>
+      <a class="wordmark" href="index.html" aria-label="Introduction">AM<span>/</span></a>
       <nav class="site-nav" aria-label="Main navigation">
         <a class="active" href="index.html">Introduction</a>
-        <a href="essays.html">Essays</a>
         <a href="books.html">Books</a>
+        <a href="essays.html">Essays</a>
         <a href="vce.html">VCE</a>
       </nav>
     </header>
-
-    <main>
-      <section class="content-section page-section personal-section" aria-labelledby="introduction-title">
-        <div class="section-kicker"><span>01</span> INTRODUCTION</div>
-        <div class="intro-grid" id="introduction-title">
-          <div class="intro-note"><span class="note-label">Name</span><p>Alex Morgan.</p></div>
-          <div class="intro-note"><span class="note-label">Based</span><p>Melbourne, Australia.</p></div>
-          <div class="intro-note"><span class="note-label">Interested in</span><p>Mathematics, computing, language, and the small details that make ideas easier to understand.</p></div>
-          <div class="intro-note"><span class="note-label">Usually doing</span><p>Reading slowly, writing things down, and looking for better questions.</p></div>
-          <div class="intro-note"><span class="note-label">Away from screens</span><p>Walking, listening to records, or finding a quiet table somewhere.</p></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>© 2026 Alex Morgan</span>
-      <span>Made for the open web</span>
-      <div class="social-links">
-        <a href="https://github.com/" aria-label="GitHub">GH</a>
-        <a href="https://www.linkedin.com/" aria-label="LinkedIn">LI</a>
-        <a href="#top" aria-label="Back to top">↑</a>
+    <main class="page page-introduction">
+      <div class="page-label"><span>01</span> INTRODUCTION</div>
+      <div class="intro-grid">
+        <article class="intro-item"><span>Name</span><p>Alex Morgan.</p></article>
+        <article class="intro-item"><span>Based</span><p>Melbourne, Australia.</p></article>
+        <article class="intro-item intro-item-wide"><span>Interested in</span><p>Mathematics, computing, language, and the small details that make ideas easier to understand.</p></article>
+        <article class="intro-item"><span>Usually doing</span><p>Reading slowly, writing things down, and looking for better questions.</p></article>
+        <article class="intro-item"><span>Away from screens</span><p>Walking, listening to records, or finding a quiet table somewhere.</p></article>
       </div>
-    </footer>
+    </main>
+    <footer class="site-footer"><span>© 2026 Alex Morgan</span><span>Personal index</span><a href="#top">Back to top ↑</a></footer>
   </div>
 </body>
 </html>

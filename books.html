@@ -3,42 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Books Alex Morgan is currently reading.">
-  <title>Books Reading | Alex Morgan</title>
+  <meta name="description" content="Books Alex Morgan is currently reading and has read.">
+  <title>Books | Alex Morgan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="site-frame">
+<body id="top">
+  <div class="site-shell">
     <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Home">AM<span>/</span></a>
+      <a class="wordmark" href="index.html" aria-label="Introduction">AM<span>/</span></a>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Introduction</a><a href="essays.html">Essays</a><a class="active" href="books.html">Books</a><a href="vce.html">VCE</a>
+        <a href="index.html">Introduction</a><a class="active" href="books.html">Books</a><a href="essays.html">Essays</a><a href="vce.html">VCE</a>
       </nav>
     </header>
-    <main>
-      <section class="content-section page-section books-section" aria-labelledby="books-title">
-        <div class="section-kicker"><span>03</span> BOOKS READING</div>
-        <div class="books-heading"><h1 id="books-title">Books<br><em>in progress.</em></h1><p>A simple record of what I am reading, with progress kept in pages.</p></div>
-        <div class="book-progress-list">
-          <article class="book-progress"><div class="book-progress-heading"><h3>Rudin: Mathematical Analysis</h3><span>108 / 171</span></div><div class="progress-track"><span style="width: 63%"></span></div><p>Walter Rudin · 63%</p></article>
-          <article class="book-progress"><div class="book-progress-heading"><h3>Gödel, Escher, Bach</h3><span>214 / 777</span></div><div class="progress-track"><span style="width: 28%"></span></div><p>Douglas Hofstadter · 28%</p></article>
-          <article class="book-progress"><div class="book-progress-heading"><h3>The Mind’s I</h3><span>86 / 432</span></div><div class="progress-track"><span style="width: 20%"></span></div><p>Hofstadter & Dennett · 20%</p></article>
-        </div>
-        <div class="books-read">
-          <div class="section-kicker"><span>03B</span> BOOKS READ</div>
-          <div class="read-list">
-            <div class="read-item"><strong>Flatland</strong><span>Edwin A. Abbott</span></div>
-            <div class="read-item"><strong>The Design of Everyday Things</strong><span>Don Norman</span></div>
-            <div class="read-item"><strong>Surely You’re Joking, Mr. Feynman!</strong><span>Richard P. Feynman</span></div>
-          </div>
+    <main class="page page-books">
+      <div class="page-label"><span>02</span> BOOKS</div>
+      <div class="page-heading"><h1>Reading<br><em>in progress.</em></h1><p>A simple record of what I am reading, with progress kept in pages.</p></div>
+      <section class="book-section" aria-labelledby="current-books-title">
+        <h2 id="current-books-title">Currently reading</h2>
+        <div class="book-list">
+          <article class="book-row"><div class="book-row-title"><h3>Rudin: Mathematical Analysis</h3><strong>108 / 171</strong></div><div class="progress-track" role="progressbar" aria-label="Rudin Mathematical Analysis progress" aria-valuemin="0" aria-valuemax="171" aria-valuenow="108"><span style="width: 63.2%"></span></div><p>Walter Rudin <span>63%</span></p></article>
+          <article class="book-row"><div class="book-row-title"><h3>Godel, Escher, Bach</h3><strong>214 / 777</strong></div><div class="progress-track" role="progressbar" aria-label="Godel Escher Bach progress" aria-valuemin="0" aria-valuemax="777" aria-valuenow="214"><span style="width: 27.5%"></span></div><p>Douglas Hofstadter <span>28%</span></p></article>
+          <article class="book-row"><div class="book-row-title"><h3>The Mind's I</h3><strong>86 / 432</strong></div><div class="progress-track" role="progressbar" aria-label="The Mind's I progress" aria-valuemin="0" aria-valuemax="432" aria-valuenow="86"><span style="width: 19.9%"></span></div><p>Hofstadter and Dennett <span>20%</span></p></article>
         </div>
       </section>
+      <section class="book-section books-read" aria-labelledby="books-read-title">
+        <h2 id="books-read-title">Books read</h2>
+        <div class="read-list"><div><strong>Flatland</strong><span>Edwin A. Abbott</span></div><div><strong>The Design of Everyday Things</strong><span>Don Norman</span></div><div><strong>Surely You're Joking, Mr. Feynman!</strong><span>Richard P. Feynman</span></div></div>
+      </section>
     </main>
-    <footer class="site-footer"><span>© 2026 Alex Morgan</span><span>Made for the open web</span><div class="social-links"><a href="https://github.com/" aria-label="GitHub">GH</a><a href="https://www.linkedin.com/" aria-label="LinkedIn">LI</a><a href="index.html" aria-label="Back to main">↑</a></div></footer>
+    <footer class="site-footer"><span>© 2026 Alex Morgan</span><span>Personal index</span><a href="#top">Back to top ↑</a></footer>
   </div>
 </body>
 </html>

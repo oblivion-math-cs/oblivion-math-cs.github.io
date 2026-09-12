@@ -11,26 +11,15 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
-<body>
-  <div class="site-frame">
-    <header class="site-header">
-      <a class="wordmark" href="index.html" aria-label="Home">AM<span>/</span></a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Introduction</a><a class="active" href="essays.html">Essays</a><a href="books.html">Books</a><a href="vce.html">VCE</a>
-      </nav>
-    </header>
-    <main>
-      <section class="content-section page-section papers-section" aria-labelledby="essays-title">
-        <div class="section-kicker"><span>03</span> ESSAYS</div>
-        <div class="section-intro"><h1 id="essays-title">Things<br><em>worked through.</em></h1><p>A home for finished essays, unfinished arguments, and notes that may become something later.</p></div>
-        <div class="essay-list">
-          <a class="essay-item" href="#essay-one"><span class="reading-meta">01 / DRAFT</span><span><strong>On learning difficult things</strong><small>A short essay about patience, practice, and the shape of understanding.</small></span><span aria-hidden="true">↗</span></a>
-          <a class="essay-item" href="#essay-two"><span class="reading-meta">02 / NOTE</span><span><strong>What a notebook is for</strong><small>Fragments on memory, attention, and writing before you know what you mean.</small></span><span aria-hidden="true">↗</span></a>
-          <a class="essay-item" href="#essay-three"><span class="reading-meta">03 / IDEA</span><span><strong>The pleasure of a clear definition</strong><small>A place to put a thought about precision, language, and good explanations.</small></span><span aria-hidden="true">↗</span></a>
-        </div>
-      </section>
+<body id="top">
+  <div class="site-shell">
+    <header class="site-header"><a class="wordmark" href="index.html" aria-label="Introduction">AM<span>/</span></a><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Introduction</a><a href="books.html">Books</a><a class="active" href="essays.html">Essays</a><a href="vce.html">VCE</a></nav></header>
+    <main class="page page-essays">
+      <div class="page-label"><span>03</span> ESSAYS</div>
+      <div class="page-heading"><h1>Things<br><em>worked through.</em></h1><p>A home for finished essays, unfinished arguments, and notes that may become something later.</p></div>
+      <div class="essay-list"><article class="essay-row"><span>01 / DRAFT</span><div><h2>On learning difficult things</h2><p>A short essay about patience, practice, and the shape of understanding.</p></div></article><article class="essay-row"><span>02 / NOTE</span><div><h2>What a notebook is for</h2><p>Fragments on memory, attention, and writing before you know what you mean.</p></div></article><article class="essay-row"><span>03 / IDEA</span><div><h2>The pleasure of a clear definition</h2><p>A thought about precision, language, and good explanations.</p></div></article></div>
     </main>
-    <footer class="site-footer"><span>© 2026 Alex Morgan</span><span>Made for the open web</span><div class="social-links"><a href="https://github.com/" aria-label="GitHub">GH</a><a href="https://www.linkedin.com/" aria-label="LinkedIn">LI</a><a href="index.html" aria-label="Back to main">↑</a></div></footer>
+    <footer class="site-footer"><span>© 2026 Alex Morgan</span><span>Personal index</span><a href="#top">Back to top ↑</a></footer>
   </div>
 </body>
 </html>
