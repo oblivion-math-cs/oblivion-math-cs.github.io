@@ -1,6 +1,5 @@
 const revealItems = document.querySelectorAll('.directory-card, .reading-item, .book-card');
 const navLinks = document.querySelectorAll('.site-nav a');
-const sections = document.querySelectorAll('main section[id]');
 
 const revealOnScroll = () => {
   revealItems.forEach((item, index) => {
@@ -22,11 +21,5 @@ revealItems.forEach((item) => {
 window.addEventListener('scroll', revealOnScroll, { passive: true });
 revealOnScroll();
 
-const updateActiveLink = () => {
-  const currentSection = [...sections].reverse().find((section) => window.scrollY >= section.offsetTop - 180);
-  const activeTarget = currentSection ? `#${currentSection.id}` : '#home';
-  navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === activeTarget));
-};
-
-window.addEventListener('scroll', updateActiveLink, { passive: true });
-updateActiveLink();
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === currentPage));
