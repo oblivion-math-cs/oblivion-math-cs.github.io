@@ -25,7 +25,8 @@ h1 em, h2 em { color: var(--blue); font-family: var(--serif); font-weight: 400; 
 .button { display: inline-flex; align-items: center; gap: 28px; padding: 16px 20px; font-size: .7rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
 .button-blue { margin-top: 42px; color: var(--white); background: var(--blue); transition: background 180ms ease, transform 180ms ease; }
 .button-blue:hover { background: #0039c9; transform: translateY(-3px); }
-.photo-placeholder { aspect-ratio: .82; position: relative; display: grid; place-items: center; background: var(--ice); border: 1px solid rgba(20, 92, 255, .3); }
+.photo-placeholder { aspect-ratio: .82; position: relative; display: grid; place-items: center; overflow: hidden; background: var(--ice) url('https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=700&q=85') center / cover; border: 1px solid rgba(20, 92, 255, .3); filter: grayscale(1) contrast(1.08); }
+.photo-placeholder::after { content: ''; position: absolute; inset: 0; background: linear-gradient(145deg, rgba(20, 92, 255, .08), rgba(7, 16, 31, .3)); mix-blend-mode: multiply; }
 .photo-placeholder::before { content: ''; position: absolute; inset: 18px; border: 1px solid rgba(20, 92, 255, .4); }
 .photo-mark { color: var(--blue); font-family: var(--serif); font-size: 4rem; letter-spacing: -.1em; }
 .photo-note { position: absolute; bottom: 28px; left: 28px; color: var(--blue); font-family: var(--mono); font-size: .58rem; text-transform: uppercase; }
